@@ -7,6 +7,11 @@ module.exports = {
     index: path.resolve(__dirname, "./src/app/index.js"),
     details: path.resolve(__dirname, "./src/app/movie-details.js"),
   },
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name]-[contenthash].js",
+    clean: true,
+  },
   devServer: {
     static: {
       directory: path.resolve(__dirname, "dist"),
